@@ -5,5 +5,20 @@
     "description": "\n",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
-  "item": []
+  "item": [
+    {
+      "name": "req",
+      "_postman_id": "80ff4968-ac1a-48df-9109-6a300c78e9d7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "",
+        "description": "req"
+      },
+      "response": []
+    }
+  ]
 }
