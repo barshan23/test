@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: v1
-  title: '2'
+  title: '3'
 servers:
   - url: 'http://localhost:3000'
 paths:
