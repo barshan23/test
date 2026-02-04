@@ -1,0 +1,909 @@
+{
+	"info": {
+		"_postman_id": "98b60bcf-e4de-4011-8050-5fb3e8f39b69",
+		"name": "Inventory service",
+		"description": "Manages product inventory, suppliers, and stock analytics for store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "55850-98b60bcf-e4de-4011-8050-5fb3e8f39b69"
+	},
+	"item": [
+		{
+			"name": "inventory",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "get Inventory Item",
+							"id": "03c4159c-4d5e-4001-b6cb-42693c283909",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/inventory/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventory",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "mollit in reprehenderit ut est"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "d209df52-639e-495a-8b03-607e82b26095",
+									"name": "200 response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/inventory/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "8908f1cf-7e87-4efd-a1e9-26e4052453a7"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"dolore consequat sint\",\n  \"name\": \"mollit fugiat quis\",\n  \"price\": -61867892.840002984,\n  \"quantity\": -21127029,\n  \"categoryId\": \"aliqua\",\n  \"supplierId\": \"Ut veniam amet\",\n  \"reorderLevel\": -56228624,\n  \"storeId\": \"ex labore\"\n}"
+								},
+								{
+									"id": "a1ccaca6-4df5-45d7-8757-ea2c80e58131",
+									"name": "404 response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventory/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "update Inventory Item",
+							"id": "e5a58102-2ad0-4e64-8716-e11dec1bcd3d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Lorem deserunt laborum nulla q\",\n  \"quantity\": -88211777,\n  \"price\": 96099370.10522515\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inventory/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventory",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "mollit in reprehenderit ut est"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "18d871d1-1319-4f29-bd33-0aa03e28ec25",
+									"name": "200 response",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"Lorem deserunt laborum nulla q\",\n  \"quantity\": -88211777,\n  \"price\": 96099370.10522515\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inventory/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "delete Inventory Item",
+							"id": "4aa8bc3d-637e-46d4-be21-2b1807ebb088",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/inventory/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventory",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "mollit in reprehenderit ut est"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "287e5908-b0c5-4322-9504-29c940b96106",
+									"name": "204 response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventory/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "fbfb2f68-4a42-4d58-be00-d4f684b1ef2e"
+				},
+				{
+					"name": "metrics",
+					"item": [
+						{
+							"name": "/inventory/metrics",
+							"id": "6f1acb9d-f2c8-4843-b029-4a388e2a3866",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/inventory/metrics",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventory",
+										"metrics"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "a1be230e-ddb2-4340-a8a7-20c48b771fc3",
+									"name": "200 response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/inventory/metrics",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"metrics"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"uuid": "417187b7-5b6f-4ca5-8b0b-48a43992d9b4"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"totalItems\": -41781899,\n  \"lowStockItems\": 82252581,\n  \"totalValue\": -24905775.993495822\n}"
+								}
+							]
+						}
+					],
+					"id": "a6aeeea3-5fcf-4840-81c3-e76cfdff893b"
+				},
+				{
+					"name": "list Inventory1",
+					"id": "8df104e3-a951-4948-9c1b-49c18af83da9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/inventory",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"inventory"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "dba4a822-20c0-4b5a-bea6-89a0eef26ece",
+							"name": "200 response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/inventory",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventory"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "addd7d70-65a3-40ec-9636-22e34eb683eb"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"price\": 9378.493546637468,\n    \"quantity\": 3416,\n    \"categoryId\": \"string\",\n    \"supplierId\": \"string\",\n    \"reorderLevel\": 301,\n    \"storeId\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"price\": 8669.427614122664,\n    \"quantity\": 8067,\n    \"categoryId\": \"string\",\n    \"supplierId\": \"string\",\n    \"reorderLevel\": 2113,\n    \"storeId\": \"string\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "create Inventory Item",
+					"id": "142ecc70-807a-4c0e-a257-f8c5b1829bbd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"in cupidatat\",\n  \"price\": -82874433.8795683,\n  \"quantity\": -33905768,\n  \"categoryId\": \"aliquip nulla ipsum pariatur nostrud\",\n  \"supplierId\": \"laborum cillum anim nisi\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/inventory",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"inventory"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "688eb089-5b21-492c-8795-4b043009c217",
+							"name": "201 response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"in cupidatat\",\n  \"price\": -82874433.8795683,\n  \"quantity\": -33905768,\n  \"categoryId\": \"aliquip nulla ipsum pariatur nostrud\",\n  \"supplierId\": \"laborum cillum anim nisi\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/inventory",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inventory"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "15931e17-6fb6-4bfb-b5a6-572d2131b1e6"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"dolore consequat sint\",\n  \"name\": \"mollit fugiat quis\",\n  \"price\": -61867892.840002984,\n  \"quantity\": -21127029,\n  \"categoryId\": \"aliqua\",\n  \"supplierId\": \"Ut veniam amet\",\n  \"reorderLevel\": -56228624,\n  \"storeId\": \"ex labore\"\n}"
+						}
+					]
+				}
+			],
+			"id": "0b069129-babf-477f-8ae0-b3de34ad9982"
+		},
+		{
+			"name": "suppliers",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "inventory",
+							"item": [
+								{
+									"name": "/suppliers/:id/inventory",
+									"id": "bbd039cc-4fb5-4ea5-8419-08923c69fefd",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/suppliers/:id/inventory",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"suppliers",
+												":id",
+												"inventory"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "mollit in reprehenderit ut est"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "31b583b6-e402-4830-8fe5-9760c92d6414",
+											"name": "200 response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/suppliers/:id/inventory",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"suppliers",
+														":id",
+														"inventory"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "d088e452-64b4-457d-9046-70db820612cc"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"price\": 9378.493546637468,\n    \"quantity\": 3416,\n    \"categoryId\": \"string\",\n    \"supplierId\": \"string\",\n    \"reorderLevel\": 301,\n    \"storeId\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"price\": 8669.427614122664,\n    \"quantity\": 8067,\n    \"categoryId\": \"string\",\n    \"supplierId\": \"string\",\n    \"reorderLevel\": 2113,\n    \"storeId\": \"string\"\n  }\n]"
+										}
+									]
+								}
+							],
+							"id": "f3ecdf99-731f-4d28-a83f-b293468f6349"
+						}
+					],
+					"id": "d6353dde-b78f-4562-8c10-c84c1d589e0d"
+				},
+				{
+					"name": "/suppliers",
+					"id": "3a35541b-92a6-453e-9be3-904eac7ba588",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/suppliers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "8cc48e66-2750-428a-9d9a-0c834fb7ff30",
+							"name": "200 response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "c81d04c1-720e-490b-bd22-cac481da215a"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"contact\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"contact\": \"string\"\n  }\n]"
+						}
+					]
+				}
+			],
+			"id": "74d570dc-d2a7-458f-b73c-e81595e716a6"
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "inventory",
+							"item": [
+								{
+									"name": "/categories/:id/inventory",
+									"id": "75fb9fcc-4021-4853-a9b6-8829242fcf36",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/categories/:id/inventory",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":id",
+												"inventory"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "mollit in reprehenderit ut est"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "1389fe75-06ec-4d34-bb40-abf341f5ea3f",
+											"name": "200 response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/categories/:id/inventory",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"categories",
+														":id",
+														"inventory"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "a172aa5b-74d7-48c3-a7ea-810176e00171"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"price\": 9378.493546637468,\n    \"quantity\": 3416,\n    \"categoryId\": \"string\",\n    \"supplierId\": \"string\",\n    \"reorderLevel\": 301,\n    \"storeId\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"price\": 8669.427614122664,\n    \"quantity\": 8067,\n    \"categoryId\": \"string\",\n    \"supplierId\": \"string\",\n    \"reorderLevel\": 2113,\n    \"storeId\": \"string\"\n  }\n]"
+										}
+									]
+								}
+							],
+							"id": "e0690be0-40e4-4555-ab28-9970a6bf6a28"
+						}
+					],
+					"id": "cdfd0b55-5d55-4631-afa2-1c71a7b5424a"
+				},
+				{
+					"name": "/categories",
+					"id": "8165161f-e41e-4221-8b68-2966a7c08760",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/categories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "195c97ea-c201-4853-9a74-88429223020a",
+							"name": "200 response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"uuid": "8bbd3254-825f-41a1-9c3c-b295c74121ca"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\"\n  }\n]"
+						}
+					]
+				}
+			],
+			"id": "23bba0c8-f008-4834-9bbe-3ad0f1c7b2de"
+		},
+		{
+			"name": "stores",
+			"item": [
+				{
+					"name": "{storeId}",
+					"item": [
+						{
+							"name": "inventory",
+							"item": [
+								{
+									"name": "/stores/:storeId/inventory",
+									"id": "6fdefcb2-c846-4ed6-9213-084a55845429",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/stores/:storeId/inventory",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"stores",
+												":storeId",
+												"inventory"
+											],
+											"variable": [
+												{
+													"key": "storeId",
+													"value": "mollit in reprehenderit ut est"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "2a09a191-a7c0-49d4-a091-840025eaa60c",
+											"name": "200 response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/stores/:storeId/inventory",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"stores",
+														":storeId",
+														"inventory"
+													],
+													"variable": [
+														{
+															"key": "storeId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "f0fc6cd9-d4cb-4a84-abdd-dc22bb36d2c1"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"price\": 9378.493546637468,\n    \"quantity\": 3416,\n    \"categoryId\": \"string\",\n    \"supplierId\": \"string\",\n    \"reorderLevel\": 301,\n    \"storeId\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"price\": 8669.427614122664,\n    \"quantity\": 8067,\n    \"categoryId\": \"string\",\n    \"supplierId\": \"string\",\n    \"reorderLevel\": 2113,\n    \"storeId\": \"string\"\n  }\n]"
+										}
+									]
+								}
+							],
+							"id": "4d910d46-a6cd-4d0b-ac5e-f81d7058edaa"
+						}
+					],
+					"id": "c2a94303-c723-4b6d-820c-4dbddb946d14"
+				}
+			],
+			"id": "f3943ecf-c662-4428-8eb6-c695d09165d4"
+		}
+	],
+	"variable": [
+		{
+			"id": "1208e460-5c64-4bc9-8542-21e428994b6d",
+			"key": "basePath",
+			"value": "default",
+			"type": "any"
+		},
+		{
+			"id": "fad4487c-d359-4dc5-a18e-89f4371909cb",
+			"key": "baseUrl",
+			"value": "https://ofxfb6hmt8.execute-api.ca-central-1.amazonaws.com/{{basePath}}",
+			"type": "any"
+		}
+	]
+}
